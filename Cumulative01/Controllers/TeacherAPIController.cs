@@ -33,7 +33,7 @@ namespace Cumulative01.Controllers
         /// Returns a list of Teachers in the system
         /// </summary>
         /// <example>
-        /// GET api/Teacher -> [{"TeacherId":1,"TeacherFirstName":"John","TeacherLastName":"Doe",...},..]
+        /// GET api/Teacher -> [{"TeacherId":1,"TeacherFirstName":"Alexendar","TeacherLastName":"Doe",...},..]
         /// </example>
         /// <returns>
         /// A list of Teacher objects containing ID, Name, EmployeeID, HireDate, and Salary
@@ -107,7 +107,7 @@ namespace Cumulative01.Controllers
         /// Finds a teacher by their ID
         /// </summary>
         /// <example>
-        /// GET api/FindTeacher/1 -> {"TeacherId":1,"TeacherFirstName":"John","TeacherLastName":"Doe",...}
+        /// GET api/FindTeacher/1 -> {"TeacherId":1,"TeacherFirstName":"Alexendar","TeacherLastName":"Doe",...}
         /// </example>
         /// <param name="id">The ID of the teacher</param>
         /// <returns>
@@ -168,7 +168,7 @@ namespace Cumulative01.Controllers
         /// Finds teachers hired within a specified date range
         /// </summary>
         /// <example>
-        /// GET api/findbydate?Start=2020-01-01&End=2022-12-31 -> [{"TeacherId":1,"TeacherFirstName":"John","TeacherLastName":"Doe",...},..]
+        /// GET api/findbydate?Start=2020-01-01&End=2022-12-31 -> [{"TeacherId":1,"TeacherFirstName":"Alexendar","TeacherLastName":"Doe",...},..]
         /// </example>
         /// <param name="Start">Start date in YYYY-MM-DD format</param>
         /// <param name="End">End date in YYYY-MM-DD format</param>

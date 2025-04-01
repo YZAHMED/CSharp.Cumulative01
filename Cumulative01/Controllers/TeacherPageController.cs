@@ -24,7 +24,7 @@ namespace Cumulative01.Controllers
         /// Returns a list of Teachers to be displayed on the page
         /// </summary>
         /// <example>
-        /// GET TeacherPage/List -> [{"TeacherId":1,"TeacherFirstName":"John","TeacherLastName":"Doe",...},..]
+        /// GET TeacherPage/List -> [{"TeacherId":1,"TeacherFirstName":"Alexendar","TeacherLastName":"Doe",...},..]
         /// </example>
         /// <returns>
         /// A list of Teacher objects containing ID, Name, EmployeeID, HireDate, and Salary
@@ -45,7 +45,7 @@ namespace Cumulative01.Controllers
         /// Returns details of a specific teacher based on the given ID
         /// </summary>
         /// <example>
-        /// GET TeacherPage/Show/1 -> {"TeacherId":1,"TeacherFirstName":"John","TeacherLastName":"Doe",...}
+        /// GET TeacherPage/Show/1 -> {"TeacherId":1,"TeacherFirstName":"Alexendar","TeacherLastName":"Doe",...}
         /// </example>
         /// <param name="Id">The ID of the teacher</param>
         /// <returns>
