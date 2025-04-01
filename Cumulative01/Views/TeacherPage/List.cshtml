@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Cumulative01.Models.Teacher>
+
+<h1> This is Yaqoob First View </h1>
+<p> There are around @Model.Count() Teachers in the School</p>
+
+@foreach (Teacher teacher in Model)
+{
+	<div><a href="/TeacherPage/Show/@teacher.TeacherId"> @teacher.TeacherFirstName @teacher.TeacherLastName </a></div>
+	<hr />
+}
