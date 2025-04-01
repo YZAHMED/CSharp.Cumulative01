@@ -12,6 +12,7 @@ namespace Cumulative01.Controllers
     public class TeacherAPIController : ControllerBase
     {
 
+
         // This is a private variable that will hold the connection to the database after being assigned in the constructor.
         private readonly SchoolDbContext _context;
 
@@ -26,6 +27,20 @@ namespace Cumulative01.Controllers
         [HttpGet(template:"Teacher")]
 
         //this is the method that will call the database and return a list of teachers.
+
+
+        /// <summary>
+        /// Returns a list of Teachers in the system
+        /// </summary>
+        /// <example>
+        /// GET api/Teacher -> [{"TeacherId":1,"TeacherFirstName":"John","TeacherLastName":"Doe",...},..]
+        /// </example>
+        /// <returns>
+        /// A list of Teacher objects containing ID, Name, EmployeeID, HireDate, and Salary
+        /// </returns>
+
+
+
         public List<Teacher> ListTeacherNames()
         {
             //This is the list of a list type of Teacher that will hold the teachers instances in as objects in the list.
@@ -87,6 +102,21 @@ namespace Cumulative01.Controllers
         }
 
 
+
+        /// <summary>
+        /// Finds a teacher by their ID
+        /// </summary>
+        /// <example>
+        /// GET api/FindTeacher/1 -> {"TeacherId":1,"TeacherFirstName":"John","TeacherLastName":"Doe",...}
+        /// </example>
+        /// <param name="id">The ID of the teacher</param>
+        /// <returns>
+        /// A Teacher object containing ID, Name, EmployeeID, HireDate, and Salary
+        /// </returns>
+
+
+
+
         //This is the API method that will receive a GET request to the endpoint /api/FindTeacher/{id}
         [HttpGet]
         [Route(template: "FindTeacher/{id}")]
@@ -132,6 +162,22 @@ namespace Cumulative01.Controllers
 
             return teacher;
         }
+
+
+        /// <summary>
+        /// Finds teachers hired within a specified date range
+        /// </summary>
+        /// <example>
+        /// GET api/findbydate?Start=2020-01-01&End=2022-12-31 -> [{"TeacherId":1,"TeacherFirstName":"John","TeacherLastName":"Doe",...},..]
+        /// </example>
+        /// <param name="Start">Start date in YYYY-MM-DD format</param>
+        /// <param name="End">End date in YYYY-MM-DD format</param>
+        /// <returns>
+        /// A list of Teacher objects hired within the given date range
+        /// </returns>
+
+
+
 
         [HttpGet]
         [Route(template: "findbydate")]
